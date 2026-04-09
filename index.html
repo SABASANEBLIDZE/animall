@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animall – ზოოამაღაზია ქუთაისი</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-paw">🐾</div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+      <p>Animall იტვირთება...</p>
+    </div>
+  </div>
+
+  <!-- PARTICLES -->
+  <div class="particles-bg" id="particles"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+          <img src="" alt="" class="nav-logo-img" />
+        <div class="logo-text-wrap">
+          <span class="logo-text-ani">ani</span><span class="logo-text-mall">mall</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"     class="nav-link active">მთავარი</a></li>
+        <li><a href="#about"    class="nav-link">ჩვენ შესახებ</a></li>
+        <li><a href="#products" class="nav-link">პროდუქცია</a></li>
+        <li><a href="#brands"   class="nav-link">ბრენდები</a></li>
+        <li><a href="#gallery"  class="nav-link">გალერეა</a></li>
+        <li><a href="#contact"  class="nav-link">კონტაქტი</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="tel:555974974" class="nav-phone">
+          <i class="fas fa-phone"></i> 555 974 974
+        </a>
+        <a href="tel:595462362" class="nav-phone-2">
+          <i class="fas fa-phone"></i> 595 462 362
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-map-marker-alt"></i> ქუთაისი, ბუხაიძის №13
+      </div>
+      <h1 class="hero-title">
+        შენი საყვარელი<br/>
+        <span class="gradient-text">ცხოველების</span><br/>
+        საუკეთესო არჩევანი
+      </h1>
+      <p class="hero-desc">
+        ხარისხიანი საკვები, სათამაშოები და აქსესუარები ძაღლებისთვის, კატებისთვის, თუთიყუშებისთვის და სხვა — ერთ სივრცეში, საუკეთესო ფასებში.
+      </p>
+      <div class="hero-btns">
+        <a href="#products" class="btn btn-primary"><i class="fas fa-paw"></i> პროდუქცია</a>
+        <a href="#contact"  class="btn btn-outline"><i class="fas fa-phone"></i> დაგვიკავშირდი</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="500">0</span>+
+          <span class="stat-label">პროდუქტი</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="20">0</span>+
+          <span class="stat-label">ბრენდი</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="1000">0</span>+
+          <span class="stat-label">კმაყოფილი მომხმარებელი</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <!--
+        HERO ფოტო: images/hero.png  (ან hero.jpg)
+        გირჩევ PNG გამჭვირვალე ფონით, ~600×600px
+        ჩასვი ნებისმიერი ლამაზი ცხოველის ფოტო
+      -->
+      <div class="hero-img-wrap">
+        <img src="images/logoi.png" alt="Animall Pet" class="hero-img"
+             onerror="this.parentElement.classList.add('hero-img-fallback'); this.style.display='none';" />
+        <div class="hero-img-emoji-fallback">🐕</div>
+        <div class="hero-img-ring ring-1"></div>
+        <div class="hero-img-ring ring-2"></div>
+        <div class="hero-img-ring ring-3"></div>
+        <div class="floating-badge badge-1"><i class="fas fa-star"></i> საუკეთესო ფასი</div>
+        <div class="floating-badge badge-2"><i class="fas fa-shield-alt"></i> ხარისხი</div>
+        <div class="floating-badge badge-3"><i class="fas fa-heart"></i> სიყვარული</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== FEATURES STRIP ===== -->
+  <section class="features-strip">
+    <div class="features-container">
+      <div class="feature-item">
+        <i class="fas fa-tags"></i>
+        <div><strong>ყველაზე იაფი ფასები</strong><span>ბაზარზე კონკურენტული ფასი</span></div>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-boxes"></i>
+        <div><strong>დიდი არჩევანი</strong><span>500+ სახეობის პროდუქტი</span></div>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-award"></i>
+        <div><strong>სანდო ბრენდები</strong><span>Royal Canin, Pro Plan და სხვა</span></div>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-heart"></i>
+        <div><strong>სიყვარულით</strong><span>ყოველ ცხოველზე ზრუნვა</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <!--
+            ABOUT ფოტო: images/about.jpg
+            მაღაზიის ფოტო ან ცხოველებთან ფოტო, ~700×500px
+          -->
+          <div class="about-img-container">
+            <img src="images/animals.png" alt="Animall მაღაზია" class="about-img"
+                 onerror="this.parentElement.classList.add('img-fallback')" />
+            <div class="about-img-fallback-inner">
+              <span>🐕</span><span>🐈</span><span>🦜</span><span>🐰</span>
+            </div>
+          </div>
+          <div class="about-badge-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <div><strong>ქუთაისი</strong><span>ბუხაიძის №13</span></div>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-label">🐶 ჩვენ შესახებ</div>
+          <h2 class="section-title">ვზრუნავთ შენი <span class="accent">ოთხფეხა მეგობარზე</span></h2>
+          <p>Animall არის ზოოამაღაზია, რომელიც ზრუნავს შენი ცხოველის ჯანმრთელობასა და კომფორტზე. ჩვენ გვიყვარს ცხოველები — ეს ყველაფერი.</p>
+          <div class="about-features">
+            <div class="about-feat">
+              <div class="feat-icon"><i class="fas fa-check-circle"></i></div>
+              <div>
+                <strong>მაღალი ხარისხის საკვები</strong>
+                <span>სხვადასხვა ბრენდისგან, ყველა ასაკისა და ჯიშისთვის</span>
+              </div>
+            </div>
+            <div class="about-feat">
+              <div class="feat-icon"><i class="fas fa-check-circle"></i></div>
+              <div>
+                <strong>მოვლის საშუალებები</strong>
+                <span>შამპუნები, რწყილების საწინააღმდეგო, ვეტპროდუქცია</span>
+              </div>
+            </div>
+            <div class="about-feat">
+              <div class="feat-icon"><i class="fas fa-check-circle"></i></div>
+              <div>
+                <strong>აქსესუარები</strong>
+                <span>სათამაშოები, ჯაჭვები, ტანსაცმელი</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-phone"></i> დაგვიკავშირდი</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section class="products section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">🛒 პროდუქცია</div>
+        <h2 class="section-title">ყველაფერი შენი <span class="accent">ცხოველისთვის</span></h2>
+        <p>ვრცელი კოლექცია ოთხ კატეგორიაში</p>
+      </div>
+
+      <div class="category-tabs">
+        <button class="tab-btn active" data-tab="dogs">🐕 ძაღლები</button>
+        <button class="tab-btn" data-tab="cats">🐈 კატები</button>
+        <button class="tab-btn" data-tab="birds">🦜 თუთიყუშები</button>
+        <button class="tab-btn" data-tab="other">🐰 სხვა</button>
+      </div>
+
+      <!-- DOGS -->
+      <div class="tab-content active" id="tab-dogs">
+        <div class="products-grid">
+
+          <div class="product-card">
+            <!--
+              ფოტო: images/products/dog-food-dry.jpg
+              რეკომენდებული ზომა: 600×400px (landscape)
+            -->
+            <div class="product-img-wrap">
+              <img src="images/products/dog-food-dry.jpg" alt="მშრალი საკვები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🥩</div>
+            </div>
+            <div class="product-info">
+              <h3>მშრალი საკვები</h3>
+              <p>Pro Plan, Royal Canin, Dog Chow, Club 4 Paws და სხვა</p>
+              <div class="product-tags"><span>ყველა ასაკი</span><span>ყველა ჯიში</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/dog-food-wet.jpg" alt="სველი საკვები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🥫</div>
+            </div>
+            <div class="product-info">
+              <h3>სველი საკვები</h3>
+              <p>Chappi, Purina, Canis — გემრიელი და სასარგებლო</p>
+              <div class="product-tags"><span>ბუნებრივი</span><span>გემო</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/dog-toys.jpg" alt="სათამაშოები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🎾</div>
+            </div>
+            <div class="product-info">
+              <h3>სათამაშოები</h3>
+              <p>თოკები, ბურთები, ჭვარტლები</p>
+              <div class="product-tags"><span>გართობა</span><span>ვარჯიში</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/dog-clothes.jpg" alt="ტანსაცმელი"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🧥</div>
+            </div>
+            <div class="product-info">
+              <h3>ტანსაცმელი</h3>
+              <p>ზამთრის ქურთუკები, ზაფხულის ტანსაცმელი</p>
+              <div class="product-tags"><span>სეზონური</span><span>სტილური</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/dog-leash.jpg" alt="ჯაჭვები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">⛓️</div>
+            </div>
+            <div class="product-info">
+              <h3>ჯაჭვები და პატრუები</h3>
+              <p>სხვადასხვა ზომა და სტილი</p>
+              <div class="product-tags"><span>გასეირნება</span><span>უსაფრთხოება</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/dog-snacks.jpg" alt="სნექები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🦴</div>
+            </div>
+            <div class="product-info">
+              <h3>სნექები</h3>
+              <p>გემრიელი და სასარგებლო დელიკატესები</p>
+              <div class="product-tags"><span>ჯანმრთელი</span><span>გემრიელი</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CATS -->
+      <div class="tab-content" id="tab-cats">
+        <div class="products-grid">
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/cat-food.jpg" alt="კატის საკვები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🐟</div>
+            </div>
+            <div class="product-info">
+              <h3>კატის საკვები</h3>
+              <p>Felix, Purina, Royal Canin, Darling, Lindo</p>
+              <div class="product-tags"><span>სველი</span><span>მშრალი</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/cat-litter.jpg" alt="ქვიშა"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🪨</div>
+            </div>
+            <div class="product-info">
+              <h3>ქვიშა</h3>
+              <p>ბენტონიტი, სილიკა — სხვადასხვა სახეობა</p>
+              <div class="product-tags"><span>ჰიგიენა</span><span>დიდი არჩევანი</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/cat-toys.jpg" alt="კატის სათამაშოები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🧶</div>
+            </div>
+            <div class="product-info">
+              <h3>სათამაშოები</h3>
+              <p>ბუმბულები, ლაზერები, ბურთები</p>
+              <div class="product-tags"><span>გართობა</span><span>ვარჯიში</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/cat-collar.jpg" alt="კოლარები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🎀</div>
+            </div>
+            <div class="product-info">
+              <h3>კოლარები და აქსესუარები</h3>
+              <p>სხვადასხვა ფერი და დიზაინი</p>
+              <div class="product-tags"><span>სტილი</span><span>უსაფრთხოება</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BIRDS -->
+      <div class="tab-content" id="tab-birds">
+        <div class="products-grid">
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/bird-food.jpg" alt="თუთიყუშის საკვები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🌾</div>
+            </div>
+            <div class="product-info">
+              <h3>თუთიყუშის საკვები</h3>
+              <p>სიმინდი, ფეტვი, სპეციალური ნარევები</p>
+              <div class="product-tags"><span>ბუნებრივი</span><span>ბალანსი</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/bird-cage.jpg" alt="გალიები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🏠</div>
+            </div>
+            <div class="product-info">
+              <h3>გალიები</h3>
+              <p>სხვადასხვა ზომა ყველა ჯიშისთვის</p>
+              <div class="product-tags"><span>კომფორტი</span><span>სხვადასხვა ზომა</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/bird-accessories.jpg" alt="მოვლის ნივთები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">✂️</div>
+            </div>
+            <div class="product-info">
+              <h3>მოვლის ნივთები</h3>
+              <p>ჩხირები, სათამაშოები, ბუდე მასალები</p>
+              <div class="product-tags"><span>ჰიგიენა</span><span>კომფორტი</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- OTHER -->
+      <div class="tab-content" id="tab-other">
+        <div class="products-grid">
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/rabbit-hay.jpg" alt="მთის ბალახი"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🌿</div>
+            </div>
+            <div class="product-info">
+              <h3>მთის ბალახი</h3>
+              <p>ბაჭიებისთვის — ახალი და მშრალი</p>
+              <div class="product-tags"><span>ბუნებრივი</span><span>ბაჭიები</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/shampoo.jpg" alt="შამპუნები"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">🧴</div>
+            </div>
+            <div class="product-info">
+              <h3>შამპუნები</h3>
+              <p>სხვადასხვა ჯიშისა და ბეწვის ტიპისთვის</p>
+              <div class="product-tags"><span>ჰიგიენა</span><span>ბეწვი</span></div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/products/vet.jpg" alt="ვეტპროდუქცია"
+                   onerror="this.parentElement.classList.add('no-photo')" />
+              <div class="product-img-icon">💊</div>
+            </div>
+            <div class="product-info">
+              <h3>ვეტპროდუქცია</h3>
+              <p>რწყილების, ტიკების საწინააღმდეგო, ვიტამინები</p>
+              <div class="product-tags"><span>ჯანმრთელობა</span><span>პრევენცია</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BRANDS ===== -->
+  <section class="brands section" id="brands">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">⭐ ბრენდები</div>
+        <h2 class="section-title">სანდო <span class="accent">პარტნიორები</span></h2>
+        <p>ვმუშაობთ მხოლოდ მსოფლიოში აღიარებულ ბრენდებთან</p>
+      </div>
+      <div class="brands-track-wrapper">
+        <div class="brands-track" id="brandsTrack">
+          <div class="brand-chip">Pro Plan</div>
+          <div class="brand-chip">Royal Canin</div>
+          <div class="brand-chip">Dog Chow</div>
+          <div class="brand-chip">Club 4 Paws</div>
+          <div class="brand-chip">Darling</div>
+          <div class="brand-chip">Lindo</div>
+          <div class="brand-chip">Felix</div>
+          <div class="brand-chip">Purina</div>
+          <div class="brand-chip">Chappi</div>
+          <div class="brand-chip">Canis</div>
+          <!-- duplicate for infinite loop -->
+          <div class="brand-chip">Pro Plan</div>
+          <div class="brand-chip">Royal Canin</div>
+          <div class="brand-chip">Dog Chow</div>
+          <div class="brand-chip">Club 4 Paws</div>
+          <div class="brand-chip">Darling</div>
+          <div class="brand-chip">Lindo</div>
+          <div class="brand-chip">Felix</div>
+          <div class="brand-chip">Purina</div>
+          <div class="brand-chip">Chappi</div>
+          <div class="brand-chip">Canis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <!--
+    გალერეა: 4 ფოტო
+    images/gallery/dog.jpg      — ძაღლი
+    images/gallery/cat.jpg      — კატა
+    images/gallery/parrot.jpg   — თუთიყუში
+    images/gallery/store.jpg    — მაღაზიის ინტერიერი
+    რეკომენდებული: 800×600px ან 1:1 კვადრატი
+  -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">📸 გალერეა</div>
+        <h2 class="section-title">ჩვენი <span class="accent">ოჯახი</span></h2>
+        <p>მაღაზია და ჩვენი კლიენტები</p>
+      </div>
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <img src="images/gallery/dogphoto.jpg" alt="ძაღლი"
+               onerror="this.parentElement.classList.add('gallery-fallback')" />
+          <div class="gallery-fallback-content"><span>🐕</span><p>ძაღლი</p></div>
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/gallery/cat.jpg" alt="კატა"
+               onerror="this.parentElement.classList.add('gallery-fallback')" />
+          <div class="gallery-fallback-content"><span>🐈</span><p>კატა</p></div>
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/gallery/parrot.jpg" alt="თუთიყუში"
+               onerror="this.parentElement.classList.add('gallery-fallback')" />
+          <div class="gallery-fallback-content"><span>🦜</span><p>თუთიყუში</p></div>
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+
+        <div class="gallery-item gallery-item-wide">
+          <img src="images/gallery/store1.jpg" alt="Animall მაღაზია"
+               onerror="this.parentElement.classList.add('gallery-fallback')" />
+          <div class="gallery-fallback-content"><span>🏪</span><p>Animall მაღაზია</p></div>
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+  </div>
+
+  <!-- ===== TESTIMONIALS — 6 ===== -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">💬 გამოხმაურება</div>
+        <h2 class="section-title">ჩვენი <span class="accent">მომხმარებლები</span> ამბობენ</h2>
+      </div>
+
+      <div class="testimonials-grid" id="testimonialsSlider">
+
+        <div class="testimonial-card t-active">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Animall-ში ყოველთვის ვდივარ — ფასები ყველაზე იაფია ქუთაისში და პროდუქტების არჩევანი ბევრია."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ნ</div>
+            <div><strong>ნინო მ.</strong><span>ბულდოგის პატრონი</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card t-active">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"კატის ქვიშის ასეთი არჩევანი სხვა არსად მინახია. გამყიდველებიც ძალიან კეთილია."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">გ</div>
+            <div><strong>გიორგი ბ.</strong><span>კატის პატრონი</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card t-active">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"ჩემი თუთიყუშისთვის საუკეთესო საკვები Animall-ში ვიყიდე. ფასი ხელმისაწვდომი!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">მ</div>
+            <div><strong>მარიამ კ.</strong><span>თუთიყუშის პატრონი</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card t-active">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"ძალიან კარგი სერვისი! სასაქონლო ნიშნების არჩევანი შთამბეჭდავია, ყოველთვის ვბრუნდები."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ს</div>
+            <div><strong>სოფიო ლ.</strong><span>ლაბრადორის პატრონი</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card t-active">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Royal Canin-ს ყველაზე კარგ ფასად აქ ვიყიდი. რეკომენდაციას ვუწევ ყველა მეგობარს!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">დ</div>
+            <div><strong>დავით ა.</strong><span>გერმანული მწყემსის პატრონი</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card t-active">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"ჩვენი ბაჭია ბედნიერია! მთის ბალახი ყოველთვის ახალია, ფასი კი ხელმისაწვდომი."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ა</div>
+            <div><strong>ანა ჩ.</strong><span>ბაჭიის პატრონი</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-paws">🐾🐾🐾</div>
+      <h2>შენი ერთგული მეგობარი <span>საუკეთესოს</span> იმსახურებს!</h2>
+      <p>მობრძანდი ქუთაისი, ბუხაიძის №13 — ჩვენ გელოდებით!</p>
+      <div class="cta-btns">
+        <a href="tel:555974974" class="btn btn-primary"><i class="fas fa-phone"></i> 555 974 974</a>
+        <a href="tel:595462362" class="btn btn-white"><i class="fas fa-phone"></i> 595 462 362</a>
+        <a href="https://www.google.com/maps/place/animall+-+%E1%83%96%E1%83%9D%E1%83%9D%E1%83%9B%E1%83%90%E1%83%A6%E1%83%90%E1%83%96%E1%83%98%E1%83%90/@42.2662292,42.671813,644m/data=!3m1!1e3!4m15!1m8!3m7!1s0x405c8cbf389b6881:0x92d97c3d6b545a55!2s13+Bukhaidze+Street,+Kutaisi!3b1!8m2!3d42.2662292!4d42.6743879!16s%2Fg%2F11lfdc12qd!3m5!1s0x405c8d001b82236d:0x325e8919e803080f!8m2!3d42.2657035!4d42.6743259!16s%2Fg%2F11z3gr7hwg?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-outline-white">
+          <i class="fas fa-map-marker-alt"></i> რუქაზე ნახვა
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">📞 კონტაქტი</div>
+        <h2 class="section-title">დაგვიკავშირდი <span class="accent">ახლავე</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><strong>მისამართი</strong><span>ქუთაისი, ბუხაიძის №13</span></div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div><strong>ტელეფონი 1</strong><a href="tel:555974974">555 974 974</a></div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div><strong>ტელეფონი 2</strong><a href="tel:595462362">595 462 362</a></div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fab fa-facebook"></i></div>
+            <div><strong>Facebook</strong><a href="https://www.facebook.com/profile.php?id=100068708028276" target="_blank">Animall Georgia</a></div>
+          </div>
+          <!--
+            Google Maps embed:
+            1. maps.google.com → მოძებნე მისამართი
+            2. Share → Embed a map → Copy HTML
+            3. ჩასვი <iframe> ქვემოთ და წაშალე map-placeholder div
+          -->
+          <div class="map-embed">
+            <div class="map-placeholder">
+              <i class="fas fa-map-marked-alt"></i>
+              <p>ქუთაისი, ბუხაიძის №13</p>
+              <a href="https://www.google.com/maps/place/animall+-+%E1%83%96%E1%83%9D%E1%83%9D%E1%83%9B%E1%83%90%E1%83%A6%E1%83%90%E1%83%96%E1%83%98%E1%83%90/@42.2662292,42.671813,644m/data=!3m1!1e3!4m15!1m8!3m7!1s0x405c8cbf389b6881:0x92d97c3d6b545a55!2s13+Bukhaidze+Street,+Kutaisi!3b1!8m2!3d42.2662292!4d42.6743879!16s%2Fg%2F11lfdc12qd!3m5!1s0x405c8d001b82236d:0x325e8919e803080f!8m2!3d42.2657035!4d42.6743259!16s%2Fg%2F11z3gr7hwg?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-primary" style="margin-top:1rem;display:inline-flex;">
+                <i class="fas fa-external-link-alt"></i> Google Maps-ზე გახსნა
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h3>შეტყობინება გამოგვიგზავნე</h3>
+          <form
+            class="contact-form"
+            id="contactForm"
+            action="https://formspree.io/f/mvzvvldg"
+            method="POST"
+          >
+            <div class="form-group">
+              <label>სახელი</label>
+              <input type="text" name="name" placeholder="შენი სახელი" required />
+            </div>
+            <div class="form-group">
+              <label>ტელეფონი</label>
+              <input type="tel" name="phone" placeholder="5XX XXX XXX" required />
+            </div>
+            <div class="form-group">
+              <label>ელ-ფოსტა <span style="font-weight:400;opacity:.6">(არასავალდებულო)</span></label>
+              <input type="email" name="email" placeholder="example@gmail.com" />
+            </div>
+            <div class="form-group">
+              <label>შეტყობინება</label>
+              <textarea name="message" placeholder="დაგვიწერე რა გჭირდება..." rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="formSubmitBtn">
+              <i class="fas fa-paper-plane"></i> გაგზავნა
+            </button>
+            <div class="form-success" id="formSuccess">
+              ✅ შეტყობინება გაიგზავნა! მალე დაგიკავშირდებით.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-text-wrap" style="font-size:2rem;margin-bottom:1rem;">
+          <span class="logo-text-ani">ani</span><span class="logo-text-mall">mall</span>
+        </div>
+        <p>ყველაფერი შენი ცხოველისთვის — ერთ სივრცეში. ქუთაისი, ბუხაიძის №13</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=100068708028276" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="tel:555974974"><i class="fas fa-phone"></i></a>
+          <a href="https://wa.me/995555974974" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>სწრაფი ლინკები</h4>
+        <ul>
+          <li><a href="#home">მთავარი</a></li>
+          <li><a href="#about">ჩვენ შესახებ</a></li>
+          <li><a href="#products">პროდუქცია</a></li>
+          <li><a href="#brands">ბრენდები</a></li>
+          <li><a href="#gallery">გალერეა</a></li>
+          <li><a href="#contact">კონტაქტი</a></li>
+        </ul>
+      </div>
+      <div class="footer-categories">
+        <h4>კატეგორიები & კონტაქტი</h4>
+        <ul>
+          <li><a href="#products">🐕 ძაღლებისთვის</a></li>
+          <li><a href="#products">🐈 კატებისთვის</a></li>
+          <li><a href="#products">🦜 თუთიყუშებისთვის</a></li>
+          <li><a href="#products">🐰 სხვა ცხოველები</a></li>
+          <li><a href="tel:555974974">📞 555 974 974</a></li>
+          <li><a href="tel:595462362">📞 595 462 362</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Animall ზოოამაღაზია. ყველა უფლება დაცულია.</p>
+      <p>Made with <span style="color:var(--orange)">❤</span> for our furry friends 🐾</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <a href="tel:555974974" class="floating-phone" aria-label="Call us">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
